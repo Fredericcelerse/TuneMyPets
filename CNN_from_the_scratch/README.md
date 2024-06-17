@@ -56,6 +56,15 @@ Saves the trained model to disk, allowing for later use in applications or furth
 
 **Epochs and Scheduler**: Configured to adapt the learning rate during training, aiming for deep refinement in later stages of model fitting.
 
-## How could we enhance the model in the future without the use of Fine-Tuning and Transfer Learning ?
+## Future Enhancements Without Fine-Tuning and Transfer Learning
 
+**CNN Architecture**: Try different CNN architectures
+
+**Hyperparameters Optimization**: Search optimal learning rate, number of layers, dropout rate, etc by using automatized methods such as grid search, random search, or Bayesian optimization.
+
+**Regularization Techniques**: Besides dropout, other regularization techniques such as L1/L2 regularization, or novel methods like noise injection and early stopping, could be employed to prevent overfitting and promote generalization.
+
+**Alternative Loss Functions**: Try with different type of loss functions to see if it helps or not.
+
+**Isolate Issues within the Database**: See if the model is overlearning one class over another one, or isolate specific images that could cause troubles in the learning.
 
