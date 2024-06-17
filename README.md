@@ -63,7 +63,7 @@ Whereas we try to run this code on a single CPU, the process is very long and th
 
 One strategy relies on the use of "Fine-Tuning" and "Transfer Learning", which are two approaches relying on the aim to learn a new model by starting from a predined model trained before on previous data. While very similar, these two approaches have to be distinguished:   
 
-- $${\color{red}{Transfer Learning}}: Transfer learning involves taking a pre-trained model from one task (usually with a large dataset) and applying it to a related but different task. This can be done by either using the model as a fixed feature extractor and training new top layers for the new task, or by adapting the entire model slightly to the new data, leveraging the pre-learned features to achieve better performance with less data for the new task.   
+- $${\color{red}Transfer}$$: Transfer learning involves taking a pre-trained model from one task (usually with a large dataset) and applying it to a related but different task. This can be done by either using the model as a fixed feature extractor and training new top layers for the new task, or by adapting the entire model slightly to the new data, leveraging the pre-learned features to achieve better performance with less data for the new task.   
 
 - **Fine-Tuning**: Fine-tuning is a specific type of transfer learning where the pre-trained model is further adjusted or "fine-tuned" for a new task. This typically involves unfreezing all or some of the layers of the model and continuing the training process on the new data, allowing the model to adjust the pre-learned weights more precisely to specifics of the new task. This is done under the assumption that the initial layers capture universal features that are useful across both tasks, while the later layers are adapted to the specifics of the new task.   
 
@@ -74,5 +74,5 @@ After once again check the database directory in the script and select the model
 python CNN_with_fine-tuning.py
 ```
 
-The most important to retain here is that in only few refinements, the model is able to learn considerably better compared to our CNN from the sractch, showing the strong benefits that could come from using such approaches. $${\color{red}Red}$$
+The most important to retain here is that in only few refinements, the model is able to learn considerably better compared to our CNN from the sractch, showing the strong benefits that could come from using such approaches. 
 
