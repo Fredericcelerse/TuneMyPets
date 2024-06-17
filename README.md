@@ -1,7 +1,7 @@
 # TuneMyPets
-This is a small introductive projet that aims at showing how to build and using fine-tuning/transfer learning approaches for image recognition.
+This introductory project demonstrates how to build and use fine-tuning/transfer learning approaches for image recognition.
 
-In this example, we show how to build a AI model based on the Convolution Neural Network (CNN) architecture for image recognition, and how we can enhance its accuracy by using fine-tuning and transfer learning approaches.
+In this example, we show how to construct an AI model based on the Convolutional Neural Network (CNN) architecture for image recognition and enhance its accuracy using fine-tuning and transfer learning approaches.
 
 ## Prerequisites
 
@@ -30,38 +30,38 @@ pip install pillow
 ```
 
 > [!NOTE]
-> If you GPUs access, then you can install the libraries adapated for this environment:
+> If you have access to GPUs, then you can install the libraries adapted for this environment:
 > ```
 > conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 > ```
 
 ### Database
 
-The database used in this project, named "Kaggle Cats and Dogs Dataset", comes from the following website: https://www.microsoft.com/en-us/download/details.aspx?id=54765   
-Once the database, ensure that you have a directory that provides two main folders labeled as "Cat" and "Dog", and where images are localized. This structure of database will be essential for the CNN script. 
+The database used in this project, named "Kaggle Cats and Dogs Dataset", is available from the following website: https://www.microsoft.com/en-us/download/details.aspx?id=54765   
+Once you have downloaded the database, ensure that you have a directory that contains two main folders labeled "Cat" and "Dog", where images are located. This structure is essential for the CNN script.
 
 ## Project architecture
 
-This example is made of tow main parts:
+This example consists of two main parts:
 
-***1. Building a CNN model from the sratch***   
-***2. How can we optimize its efficiency***   
+***1. Building a CNN model from sratch***   
+***2. Optimizing its efficiency***   
 
 Let us see in more details these two aspects
 
-### 1. Building a CNN model from the sratch
+### 1. Building a CNN model from sratch
 
-Within the folder [CNN_from_the_scratch](CNN_from_the_scratch), there is a script called [CNN.py](CNN_from_the_scratch/CNN.py). After carefully checked the path to the database, you can launch the script by typing:
+Within the folder [CNN_from_the_scratch](CNN_from_the_scratch), there is a script named [CNN.py](CNN_from_the_scratch/CNN.py). After verifying the path to the database, you can launch the script by typing:
 ```
 python CNN.py
 ```
-The model will first load the full database, then filter the images in order to keep only the valid ones, and then setup and train the CNN model. More details about the setup and how the model is built is explained in the [README.md](CNN_from_the_scratch/README.md) file and commentaries about the code itself is available in the script. 
+The model will first load the entire database, then filter the images to keep only the valid ones, and then set up and train the CNN model. More details about the setup and how the model is built are explained in the [README.md](CNN_from_the_scratch/README.md) file, and comments about the code itself are available in the script.
 
-### 2. How can we optimize its efficiency
+### 2. Optimizing its efficiency
 
-Whereas we try to run this code on a single CPU, the process is very long and the accuracy is very low, ranging from 50 to 60% and seems to correspond to randomicity. Whereas optimizing the code seems to be a good idea, doing it without having access to some GPU is a very hard task ... So how can we be more efficient to obtain an AI model that perform the desired tasks without having to pay lot of times in optimization and GPUs ?   
+While running this code on a single CPU, the process is very lengthy and the accuracy is quite low, ranging from 50 to 60%, which seems almost random. While optimizing the code is a good idea, doing so without access to some GPUs is a challenging task... So how can we be more efficient in obtaining an AI model that performs the desired tasks without spending a lot of time on optimization and GPUs?
 
-One strategy relies on the use of "Fine-Tuning" and "Transfer Learning", which are two approaches relying on the aim to learn a new model by starting from a predined model trained before on previous data. While very similar, these two approaches have to be distinguished:   
+One strategy relies on the use of "Fine-Tuning" and "Transfer Learning", which are two approaches based on the goal of learning a new model by starting from a predefined model trained on previous data. While very similar, these two approaches must be distinguished:
 
 - **Transfer Learning**: Transfer learning involves taking a pre-trained model from one task (usually with a large dataset) and applying it to a related but different task. This can be done by either using the model as a fixed feature extractor and training new top layers for the new task, or by adapting the entire model slightly to the new data, leveraging the pre-learned features to achieve better performance with less data for the new task.   
 
@@ -69,10 +69,10 @@ One strategy relies on the use of "Fine-Tuning" and "Transfer Learning", which a
 
 In the folder [CNN_with_fine-tuning](CNN_with_fine-tuning), we provide a documented script called [Fine-Tuning.py](CNN_with_fine-tuning/Fine-Tuning.py). More explanations are available in the corresponding [README.md](CNN_with_fine-tuning/README.md) and the script itself.   
 
-After once again check the database directory in the script and select the model ou would like to use (vgg16 or ResNet18), you can launch the script by typing:
+After once again checking the database directory in the script and selecting the model you would like to use (VGG16 or ResNet18), you can launch the script by typing:
 ```
 python Fine-Tuning.py
 ```
 
-The most important to retain here is that in only few refinements, the model is able to learn considerably better compared to our CNN from the sractch, showing the strong benefits that could come from using such approaches. 
+The most important takeaway here is that in only a few refinements, the model is able to learn considerably better compared to our CNN from scratch, showing the strong benefits that can come from using such approaches.
 
