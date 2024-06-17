@@ -51,11 +51,11 @@ Let us see in more details these two aspects
 
 ### 1. Building a CNN model from sratch
 
-Within the folder [CNN_from_the_scratch](CNN_from_the_scratch), there is a script named [CNN.py](CNN_from_the_scratch/CNN.py). After verifying the path to the database, you can launch the script by typing:
+Within the folder [CNN_from_scratch](CNN_from_scratch), there is a script named [CNN.py](CNN_from_scratch/CNN.py). After verifying the path to the database, you can launch the script by typing:
 ```
 python CNN.py
 ```
-The model will first load the entire database, then filter the images to keep only the valid ones, and then set up and train the CNN model. More details about the setup and how the model is built are explained in the [README.md](CNN_from_the_scratch/README.md) file, and comments about the code itself are available in the script.
+The model will first load the entire database, then filter the images to keep only the valid ones, and then set up and train the CNN model. More details about the setup and how the model is built are explained in the [README.md](CNN_from_scratch/README.md) file, and comments about the code itself are available in the script.
 
 ### 2. Optimizing its efficiency
 
