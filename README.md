@@ -67,11 +67,11 @@ One strategy relies on the use of "Fine-Tuning" and "Transfer Learning", which a
 
 - **Fine-Tuning**: Fine-tuning is a specific type of transfer learning where the pre-trained model is further adjusted or "fine-tuned" for a new task. This typically involves unfreezing all or some of the layers of the model and continuing the training process on the new data, allowing the model to adjust the pre-learned weights more precisely to specifics of the new task. This is done under the assumption that the initial layers capture universal features that are useful across both tasks, while the later layers are adapted to the specifics of the new task.   
 
-In the folder [Fine-Tuning](Fine-Tuning), we provide a documented script called [CNN_with_fine-tuning.py](Fine-Tuning/CNN_with_fine-tuning.py). More explanations are available in the corresponding [README.md](CNN_with_fine-tuning/README.md) and the script itself.   
+In the folder [CNN_with_fine-tuning](CNN_with_fine-tuning), we provide a documented script called [Fine-Tuning.py](CNN_with_fine-tuning/Fine-Tuning.py). More explanations are available in the corresponding [README.md](CNN_with_fine-tuning/README.md) and the script itself.   
 
 After once again check the database directory in the script and select the model ou would like to use (vgg16 or ResNet18), you can launch the script by typing:
 ```
-python CNN_with_fine-tuning.py
+python Fine-Tuning.py
 ```
 
 The most important to retain here is that in only few refinements, the model is able to learn considerably better compared to our CNN from the sractch, showing the strong benefits that could come from using such approaches. 
