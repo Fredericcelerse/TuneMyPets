@@ -61,5 +61,10 @@ One strategy relies on the use of "Fine-Tuning" and "Transfer Learning", which a
 
 In the folder [Fine-Tuning](Fine-Tuning), we provide a documented script called [CNN_with_fine-tuning.py](Fine-Tuning/CNN_with_fine-tuning.py). More explanations are available in the corresponding [README.md](CNN_with_fine-tuning/README.md) and the script itself.   
 
+After once again check the database directory in the script and select the model ou would like to use (vgg16 or ResNet18), you can launch the script by typing:
+```
+python CNN_with_fine-tuning.py
+```
+
 The most important to retain here is that in only few refinements, the model is able to learn considerably better compared to our CNN from the sractch, showing the strong benefits that could come from using such approaches. 
 
