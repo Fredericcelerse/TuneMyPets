@@ -29,6 +29,12 @@ conda install pytorch torchvision torchaudio cpuonly -c pytorch
 pip install pillow
 ```
 
+> [!NOTE]
+> If you GPUs access, then you can install the libraries adapated for this environment:
+> ```
+> conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+> ```
+
 ### Database
 
 The database used in this project, named "Kaggle Cats and Dogs Dataset", comes from the following website: https://www.microsoft.com/en-us/download/details.aspx?id=54765   
