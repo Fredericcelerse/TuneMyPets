@@ -35,5 +35,14 @@ The database used in this project, named "Kaggle Cats and Dogs Dataset", comes f
 
 ## Project architecture
 
-# TuneMyPets
+This example is made of tow main parts:
+
+***1. Building a CNN model from the sratch***
+***2. How can we optimize its efficiency***
+
+Let us see in more details these two aspects
+
+### Building a CNN model from the sratch
+
+### How can we optimize its efficiency
 
