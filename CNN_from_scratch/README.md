@@ -1,4 +1,4 @@
-# CNN from the scratch
+# CNN from scratch
 
 Here is explained how the code was built and works, but also how we could enhance it in future works.
 
