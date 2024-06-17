@@ -4,7 +4,7 @@ Here is explained how the code was built and works, but also how we could enhanc
 
 ## Code structuration
 
-### Data Preprocessing
+### 1. Data Preprocessing
 
 **Transformations**: The code applies multiple transformations to prepare and augment the dataset:
 - RandomResizedCrop to 224x224 pixels to standardize input size.
@@ -17,12 +17,12 @@ This part is essential when we deal with dataset of Images, as we need to standa
 
 **Image Verification**: A custom function check_image is implemented to ensure that all loaded images are valid, preventing runtime errors due to corrupted files.
 
-### Dataset Loading and Splitting
+### 2. Dataset Loading and Splitting
 
 - Utilizes PyTorch's ImageFolder to load images from a specified directory (data_dir).
 - Filters out invalid images and splits the dataset into 80% training and 20% validation subsets to ensure the model is evaluated on unseen data.
 
-### Model Definition
+### 3. Model Definition
 
 **Architecture**: A custom convolutional neural network (CNN) class CNN:
 - Two convolutional layers with batch normalization and max pooling to extract and downsample features.
@@ -30,7 +30,7 @@ This part is essential when we deal with dataset of Images, as we need to standa
 
 **Weight Initialization**: Uses kaiming_normal_ initialization for convolutional and linear layers to prevent vanishing or exploding gradients during training.
 
-### Training Setup
+### 4. Training Setup
 
 **Optimization**: Employs SGD optimizer with a learning rate of 0.001 and momentum of 0.9, chosen to balance the speed and stability of convergence.
 
@@ -38,12 +38,24 @@ This part is essential when we deal with dataset of Images, as we need to standa
 
 **Scheduler**: Implements a StepLR learning rate scheduler with a step size of 30 and gamma of 0.1 to reduce the learning rate by a factor of 10 every 30 epochs, helping to fine-tune the model as it converges.
 
-### Training Process
+### 5. Training Process
 
 - Iterates through the training data in batches, computing losses and updating the model parameters.
 - Gradient clipping is used to control the explosion of gradients, ensuring stable updates.
 - Monitors gradient norms and prints training progress, including loss and accuracy for each minibatch, allowing for real-time monitoring of training performance.
 
-### Saving the Model
+### 6. Saving the Model
 
 Saves the trained model to disk, allowing for later use in applications or further fine-tuning.
+
+## Choosing hyperparameters
+
+**Learning Rate and Momentum**: Selected to provide a good compromise between fast convergence and training stability.
+
+**Batch Size**: Set to 64 to make effective use of memory resources while allowing for sufficient gradient estimation accuracy.
+
+**Epochs and Scheduler**: Configured to adapt the learning rate during training, aiming for deep refinement in later stages of model fitting.
+
+## How could we enhance the model in the future without the use of Fine-Tuning and Transfer Learning ?
+
+
