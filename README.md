@@ -37,12 +37,20 @@ The database used in this project, named "Kaggle Cats and Dogs Dataset", comes f
 
 This example is made of tow main parts:
 
-***1. Building a CNN model from the sratch***
-***2. How can we optimize its efficiency***
+***1. Building a CNN model from the sratch***   
+***2. How can we optimize its efficiency***   
 
 Let us see in more details these two aspects
 
-### Building a CNN model from the sratch
+### 1. Building a CNN model from the sratch
 
-### How can we optimize its efficiency
+Within the folder [CNN_from_the_scratch](CNN_from_the_scratch), there is a script called [CNN.py](CNN_from_the_scratch/CNN.py). After carefully checked the path to the database, you can launch the script by typing:
+```
+python CNN.py
+```
+The model will first load the full database, then filter the images in order to keep only the valid ones, and then setup and train the CNN model. More details about the setup and how the model is built is explained in the [README.md](CNN_from_the_scratch/README.md) file. 
+
+### 2. How can we optimize its efficiency
+
+
 
