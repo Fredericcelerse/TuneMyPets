@@ -74,5 +74,5 @@ After once again check the database directory in the script and select the model
 python CNN_with_fine-tuning.py
 ```
 
-The most important to retain here is that in only few refinements, the model is able to learn considerably better compared to our CNN from the sractch, showing the strong benefits that could come from using such approaches. 
+The most important to retain here is that in only few refinements, the model is able to learn considerably better compared to our CNN from the sractch, showing the strong benefits that could come from using such approaches. $${\color{red}Red}$$
 
