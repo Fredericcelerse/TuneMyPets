@@ -23,11 +23,15 @@ conda activate TuneMyPets
 
 Once the environment is properly created, install the necessary Python libraries to execute the code:
 ```
-cconda install pytorch torchvision torchaudio cpuonly -c pytorch
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
 ```
 ```
 pip install pillow
 ```
+
+### Database
+
+The database used in this project, named "Kaggle Cats and Dogs Dataset", comes from the following website: https://www.microsoft.com/en-us/download/details.aspx?id=54765
 
 ## Project architecture
 
