@@ -58,7 +58,7 @@ for param in model.parameters():
 
 # Replace the final layer with a new layer that has only 2 output nodes, for our binary classification task
 num_features = model.fc.in_features
-model.fc = nn.Linear(num_features, 2)
+model.fc = nn.Linear(num_features, 2)	# 2 because of we only have cat and dog here
 
 # Set the computation device based on GPU availability
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
